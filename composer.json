@@ -1,0 +1,14 @@
+{
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "BeNouze\\": "./class"
+        }
+    },
+    "config": {
+        "vendor-dir": "static-vendor"
+    }
+}
