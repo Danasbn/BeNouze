@@ -47,14 +47,10 @@ class Beer extends CustomPostType{
             'title',
             'editor',
             'excerpt',
-            // 'author',
             'thumbnail',
             'trackbacks',
-            //'custom-fields',
             'comments',
-            // 'revisions',
-            // 'page-attributes',
-            // 'post-formats' // https://wordpress.org/support/article/post-formats/
+
         ],
     ];
 };
