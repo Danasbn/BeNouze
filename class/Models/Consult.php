@@ -16,8 +16,6 @@ class Consult extends CoreModel
     {
         $database = static::getDatabase();
 
-        // récupèration du charset (alphabet) utilisé par la bdd sur laquelle tourne wp
-        // $database->prefix nous permet de récupérer le préfixe des tables wp
         $charset = $database->get_charset_collate();
 
         $tableName = static::getTableName();
@@ -67,15 +65,14 @@ class Consult extends CoreModel
         // récupération de l'obget global $wpdb
         $database = static::getDatabase();
 
-        // préparation de la requête ; il faut passer les valeurs à injecter dans la requête
+
         $preparedQuery = $database->prepare(
             $sql,
             [
-                // les paramètres de la requête doivent respecter l'ordre d'apparition des %* dans la requête
+
                 $id
             ]
-        );
-        // execution de la requête
+
         $database->query($preparedQuery);
     }
 }
