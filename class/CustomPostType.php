@@ -27,14 +27,8 @@ class CustomPostType {
             'title',
             'editor',
              'excerpt',
-            // 'author',
             'thumbnail',
-            // 'trackbacks',
-             //'custom-fields',
              'comments',
-            // 'revisions',
-            // 'page-attributes',
-            // 'post-formats' // https://wordpress.org/support/article/post-formats/
         ],
     ];
     public function __construct($name, $label)
