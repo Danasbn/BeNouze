@@ -17,16 +17,12 @@ class Plugin
     {
         
         $this->registerCustomPostTypes();
-        $this->registerPostMetadatas();
         
+        $this->registerPostMetadatas();
+     
         $this->registerCustomTaxonomies();
-        /*
-        $this->registerTaxonomiesMetadata();
-        */
+
         $this->createCustomRoles();
-
-
-        /*$this->customizeRegistrationForm();*/
      
         $this->registerUserMetadata();
 
@@ -56,22 +52,7 @@ class Plugin
         $userPhone->register();
     }
 
-    /*
-    public function customizeRegistrationForm()
-    {
-        $registrationForm = new RegistrationForm();
-        $registrationForm->register();
-
-    }
-    */
-/*
-    public function registerTaxonomiesMetadata()
-    {
-        $skillLogo = new TaxonomyMetadata('skill', 'skill-logo', 'URL Logo');
-        $skillLogo->register();
-
-    }
-    */
+   
 
      public function createCustomPostTypes()
     {
