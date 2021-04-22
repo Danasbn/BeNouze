@@ -79,12 +79,7 @@ class UserController extends CoreController
         $login = filter_input(INPUT_POST, 'login');
         $password = filter_input(INPUT_POST, 'password');
         $email = filter_input(INPUT_POST, 'email');
-        //$display_name = filter_input(INPUT_POST, 'display_name');
-
-        /* //! Include of the following metadata in functions.php
-        $zipcode = filter_input(INPUT_POST, 'user-codepostal');
-        $city = filter_input(INPUT_POST, 'user-city');
-        */
+    
 
         $userOrError = wp_create_user(
             $login,
@@ -111,9 +106,6 @@ class UserController extends CoreController
         // Remove role (customer (client) est le rôle par défaut lorsqu'un utilisateur est créé)
         $userObject->remove_role('customer');
 
-
-        
-        // wp_redirect( home_url( '/' ) );
       //  wp_redirect(get_home_url() . '/user/signin/');
         exit; 
     }
@@ -164,9 +156,6 @@ class UserController extends CoreController
         wp_redirect( home_url( 'user/edit-profile/' ) );
     }
 
-
-
-    //! Méthode concernant la page pour editer son profil
 
     public function editProfile()
     {
