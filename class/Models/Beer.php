@@ -49,7 +49,7 @@ class Beer extends CoreModel
         //$preparedQuery = $database->prepare($sql, []);
         $results = $database->get_results($sql);
 
-        // ce tableau stocke la liste des objets Projets
+        // ce tableau stocke la liste des objets beers
         $beers = [];
         foreach($results as $result) {
             $beer = new Beer();
@@ -128,8 +128,7 @@ class Beer extends CoreModel
     {
         $database = static::getDatabase();
 
-        // récupèration du charset (alphabet) utilisé par la bdd sur laquelle tourne wp
-        // $database->prefix nous permet de récupérer le préfixe des tables wp
+
         $charset = $database->get_charset_collate();
 
         $tableName = static::getTableName();
