@@ -138,31 +138,6 @@ class Plugin
 
         $role->add_cap('read');
 
-        //$role->add_cap('edit_developer');
-        //$role->add_cap('edit_developers');
-        //$role->add_cap('read_developers');
-        //$role->add_cap('delete_developers');
-        //$role->add_cap('delete_published_developers');
-        //$role->add_cap('delete_others_developers');
-        //$role->add_cap('edit_others_developers');
-        //$role->add_cap('publish_developers');
-        //$role->add_cap('read_private_developers');
-        
-        //$role->remove_cap('delete_others_posts');
-        //$role->remove_cap('delete_posts');
-        //$role->remove_cap('delete_private_posts');
-        //$role->remove_cap('delete_published_posts');
-        //$role->remove_cap('edit_others_posts');
-        //$role->remove_cap('edit_posts');
-        //$role->remove_cap('edit_private_posts');
-        //$role->remove_cap('edit_published_posts');
-        //$role->remove_cap('manage_categories');
-        //$role->remove_cap('moderate_comments');
-        //$role->remove_cap('publish_posts');
-        //$role->remove_cap('read_private_posts');
-
-        //===========================================================
-        //===========================================================
 
     }
 
@@ -170,21 +145,7 @@ class Plugin
 
     public function registerPostMetadatas()
     {
-        /*
-        $githubURL = new PostMetadata(
-            // le custom post type  sur lequel ajouter le champs supplémentaire
-            'developer',
-
-            // l'identifiant (la variable) qui va nous nous permettre de stocker l'information
-            'github-profile-url',
-
-            // libéllé
-            'Github profile URL'
-        );
-        $githubURL->register();
-
-        */
-
+        
         $pricebeer = new PriceBeer(
             'beer',
             'price',
