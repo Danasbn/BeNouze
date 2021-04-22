@@ -3,7 +3,7 @@ namespace BeN;
 
 class TaxonomyMetadata
 {
-    // sur quelle taxonomy nous ajoutons une métadata
+
     protected $taxonomy;
 
     protected $name;
