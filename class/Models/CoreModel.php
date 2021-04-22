@@ -12,12 +12,9 @@ abstract class CoreModel
 
     public function __construct()
     {
-        // nous allons avoir besoin d'un composant pour communiquer avec la bdd ; nous utilisons la méthode (statique) getDatabase pour récupérer l'objet wp permettant de travaller sur la bdd
+        // nous allons avoir besoin d'un composant pour communiquer avec la bdd ; nous utilisons la méthode (statique) getDatabase pour récupérer l'objet wp permettant de travailler sur la bdd
 
-        // +- kifkif mais peut poser problème "late static binding"
-        // https://www.php.net/manual/en/language.oop5.late-static-bindings.php
-        // $this->database = self::getDatabase();
-        // $this->database = CoreModel::getDatabase();
+       
         $this->database = static::getDatabase();
     }
 
@@ -35,7 +32,6 @@ abstract class CoreModel
 
     public static function getDatabase()
     {
-        // attention avec wp il y a du code un vieux ; il faut avoir du respect les vieux
 
         // cette variable globale nous permet d'accéder au composant BDD de wordpress
         global $wpdb;
