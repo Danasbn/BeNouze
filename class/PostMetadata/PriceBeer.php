@@ -3,12 +3,13 @@ namespace BeNouze\PostMetadata;
 
 use BeNouze\PostMetadata;
 
+// TODO renommer en BeerPrice !! 
 class PriceBeer extends PostMetadata
 {
     public function editForm($post)
     {
 
-        // le champ PriceBeer ne s'affiche que si l'on est admin
+
         $user = wp_get_current_user();
         $roles = $user->roles;
 
@@ -27,7 +28,7 @@ class PriceBeer extends PostMetadata
         );
 
         if(!empty($values)) {
-            // attention wp renvoie un tableau lorsque l'on accède à la valeur d'une métadata
+
             $value = $values[0];
         }
         else {
