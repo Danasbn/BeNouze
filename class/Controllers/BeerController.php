@@ -19,7 +19,7 @@ class BeerController extends CoreController
         $this->show($templateName, $viewVars);
     }
 
-    //! A VERIFIER
+    
     public function product($id)
     {
         $product = new Beer();
@@ -77,7 +77,7 @@ class BeerController extends CoreController
             'style',
             'color',
             'degre',
-            //'price',
+            //'price', for V2
         ];
 
         foreach ($criterias as $criteria) {
