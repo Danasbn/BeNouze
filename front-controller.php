@@ -36,13 +36,6 @@ $router->map(
     'POST',
     '/benouze/rating/[i:id]/',
     function ($id) {
-        
-        echo '<div style="border: solid 2px #F00">';
-            echo '<div style="; background-color:#CCC">@'.__FILE__.' : '.__LINE__.'</div>';
-            echo '<pre style="background-color: rgba(255,255,255, 0.8);">';
-            print_r($_POST);
-            echo '</pre>';
-        echo '</div>';
 
         echo __FILE__.':'.__LINE__; exit();
         $controller = new BeerController();
