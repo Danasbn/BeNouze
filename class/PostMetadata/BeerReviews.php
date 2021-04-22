@@ -31,7 +31,7 @@ class BeerReviews extends PostMetadata
         } else {
             $value = '';
         }
-
+// Gestion des "demies notes" en V2
         $options = [
             0 => '0',
             1 => '1',
