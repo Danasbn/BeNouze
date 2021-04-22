@@ -29,7 +29,7 @@ $router->map(
         $controller->filter();
         
     },
- // 'benouze-beer-filter'
+
 );
 
 $router->map(
@@ -70,10 +70,7 @@ $requestMethod = $_SERVER['REQUEST_METHOD'];
 
 $routeName = get_query_var('custom-route');
 
-// if($routeName === 'home') {
-//     $controller = new UserController();
-//     $controller->home();
-// }
+
 if($routeName === 'user-edit-profile') {
     $controller = new UserController();
     if($requestMethod === 'GET') {
@@ -113,38 +110,6 @@ elseif($routeName === 'user-signup') {
      $controller->sandbox();
  }
 
-// elseif($routeName === 'products-list') {
-//     $controller = new BeerController();
-//     $controller->list();
-// }
-// elseif($routeName === 'product') {
-//     $controller = new BeerController();
-//     $controller-> product();
-// }
-// elseif($routeName === 'about') {
-//     $controller = new BeerController();
-//     $controller-> about();
-// }
-// elseif($routeName === 'breweries') {
-//     $controller = new BeerController();
-//     $controller-> breweries();
-// }
-// elseif($routeName === 'our-values') {
-//     $controller = new BeerController();
-//     $controller-> ourValues();
-// }
-// elseif($routeName === 'legal-notices') {
-//     $controller = new BeerController();
-//     $controller-> legalNotices();
-// }
-// elseif($routeName === 'privacy-policy') {
-//     $controller = new BeerController();
-//     $controller-> privacyPolicy();
-// }
-// elseif($routeName === '404') {
-//     $controller = new BeerController();
-//     $controller-> error();
-// }
 else {
     die('fail');
 }
